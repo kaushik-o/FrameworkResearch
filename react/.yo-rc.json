@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "sample",
+    "style": "css",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
