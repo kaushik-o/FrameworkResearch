@@ -4,8 +4,10 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import configureStore from './stores';
+import { applyMiddleware } from 'redux';
+import reduxPromise from 'redux-promise';
 
-const store = configureStore();
+const store = applyMiddleware(reduxPromise)(configureStore)();
 
 ReactDOM.render(
   <AppContainer>

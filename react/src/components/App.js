@@ -4,10 +4,15 @@ import './app.css';
 
 class AppComponent extends React.Component {
 
+  constructor(props) {
+    super(props);    
+
+    this.props.actions.get_questions();
+  }
+
   render() {
     return (
       <div className="index">
-        <YeomanImage />
         <div className="notice">
           Please edit <code>src/components/App.js</code> to get started!
         </div>

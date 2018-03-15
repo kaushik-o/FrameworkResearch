@@ -65,6 +65,7 @@
     "webpack-dev-server": "^2.1.0-beta"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cross-env": "^3.1.0",
     "react": "^15.0.1",
     "react-css-modules": "^3.7.10",
@@ -72,6 +73,7 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
     "webpack": "^2.1.0-beta.6"
   }
 }
