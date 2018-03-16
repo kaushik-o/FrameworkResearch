@@ -1,4 +1,7 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import ContentContainer from './ContentContainer'; 
 import YeomanImage from './YeomanImage';
 import './app.css';
 
@@ -12,10 +15,9 @@ class AppComponent extends React.Component {
 
   render() {
     return (
-      <div className="index">
-        <div className="notice">
-          Please edit <code>src/components/App.js</code> to get started!
-        </div>
+      <div>
+        <Header/>
+        <ContentContainer/>
       </div>
     );
   }
