@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
+import QuestionList from '../../containers/question_list'
 
 import { questionOperations } from 'state/ducks/questions/';
 
@@ -12,7 +13,10 @@ class HomeComponent extends Component {
   render() {
     return (
       <div>
+      <div>
         Home page
+      </div>
+      <QuestionList />
       </div>
     );
   }

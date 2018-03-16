@@ -11,6 +11,7 @@ function reducer(state = initialState, action) {
   /* Keep the reducer clean - do not mutate the original state. */
   // const nextState = Object.assign({}, state);
 
+  console.log("ACTION",action);
   switch (action.type) {
     /*
     case YOUR_ACTION: {
@@ -18,6 +19,9 @@ function reducer(state = initialState, action) {
       return nextState;
     }
     */
+   case 'GET_QUESTIONS':{
+     return action.payload.data
+   }
     default: {
       /* Return original state if no actions were consumed. */
       return state;
