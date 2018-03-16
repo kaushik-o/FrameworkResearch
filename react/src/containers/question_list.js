@@ -11,7 +11,7 @@ class QuestionList extends Component {
         }
        return this.props.questions.map((ques,index)=>{
            return (
-               <div key={ques.key} onClick={()=>this.props.selectQuestion(ques)}>
+               <div key={ques._id.$oid} onClick={()=>this.props.selectQuestion(ques)}>
                <div className='row'>
                    <div className='col-xs-1 text-right'>{index+1}.</div>
                     <div className='col-xs-11'>
@@ -32,6 +32,7 @@ class QuestionList extends Component {
     }
 }
 function mapStateToProps(state) {
+    console.log("STATE",state);
     return {
         questions:state.questions
     }

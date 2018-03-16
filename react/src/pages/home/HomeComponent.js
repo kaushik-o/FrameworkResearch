@@ -6,6 +6,11 @@ import QuestionList from '../../containers/question_list'
 import { questionOperations } from 'state/ducks/questions/';
 
 class HomeComponent extends Component { 
+  constructor (props){
+    super(props);
+    this.state = {};
+    this.state.questions = this.props.questions;
+  }
   componentDidMount() {
     this.props.getQuestions();
   }
@@ -16,7 +21,7 @@ class HomeComponent extends Component {
       <div>
         Home page
       </div>
-      <QuestionList />
+      <QuestionList questions={this.props.questions} />
       </div>
     );
   }
@@ -25,6 +30,7 @@ class HomeComponent extends Component {
 function mapStateToProps(state) {
   // eslint-disable-line no-unused-vars
   /* Populated by react-webpack-redux:reducer */
+  console.log("STAT",state);
   const props = { questions: state.questions };
   return props;
 }

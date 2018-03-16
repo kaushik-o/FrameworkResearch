@@ -1,7 +1,10 @@
 import * as types from "./types";
 
 const questionsReducer = (state = null, action) => {
-  console.log(action);
+  if(action.type === 'app/GET_QUESTIONS'){
+    return action.payload.data;
+  }
+
   return state; 
 };
 

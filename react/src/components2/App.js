@@ -6,10 +6,8 @@ import YeomanImage from './YeomanImage';
 import './app.css';
 
 class AppComponent extends React.Component {
-
   constructor(props) {
     super(props);    
-
     this.props.actions.get_questions();
   }
 
